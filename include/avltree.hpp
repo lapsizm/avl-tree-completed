@@ -192,6 +192,7 @@ namespace BMSTU {
             } else {
                 TreeNode *temp = findMax(node->left).release();
                 node->key = temp->key;
+                node->value = temp->value;
                 if (node->left) {
                     Balance(node->left);
                 }
